@@ -1,6 +1,6 @@
 import express from "express";
 import bcrypt from "bcryptjs";
-import User from "../models/User.js";
+import user from "../models/user.js";
 
 const router = express.Router();
 
@@ -8,7 +8,7 @@ const router = express.Router();
 router.post("/register", async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    const newUser = new User({ ...req.body, password: hashedPassword });
+    const newUser = new user({ ...req.body, password: hashedPassword });
     const savedUser = await newUser.save();
     res.status(201).json(savedUser);
   } catch (err) {
