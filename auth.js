@@ -1,6 +1,6 @@
 import express from "express";
 import bcrypt from "bcryptjs";
-import user from "../models/user.js"; // Ensure the import is in lowercase
+import user from "../user.js"; // Ensure the import is in lowercase
 
 const router = express.Router();
 
