@@ -14,7 +14,7 @@
   },
   {
   "type": "module"
-}
+},
   "main": "dist/node.js",
   "bugs": {
     "url": "https://jira.mongodb.org/projects/COMPASS/issues",
